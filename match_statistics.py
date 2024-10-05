@@ -23,7 +23,7 @@ def fetch_match_statistics(match_id):
         print(f"Failed to retrieve match statistics. Status code: {response.status_code}")
         return None
 
-# Function to prepare statistics for CSV row
+# Function to prepare statistics for XLSX row
 def prepare_statistics_row(statistics, home_team, away_team):
     def get_stat_value(stat_name, home_or_away):
         return statistics.get(stat_name, {}).get(home_or_away, 'N/A')

@@ -19,7 +19,7 @@ def fetch_match_details(match_id):
         return None, None, None, None
 
 
-# Function to prepare statistics row for CSV
+# Function to prepare statistics row for XLSX
 def prepare_statistics_row(statistics, home_team, away_team):
     def get_stat_value(stat_name, home_or_away):
         return statistics.get(stat_name, {}).get(home_or_away, 'N/A')

@@ -41,7 +41,7 @@ if __name__ == "__main__":
             print("Invalid choice. Exiting.")
             break
 
-        directory = os.path.expanduser('~/Apex/Brainiac/Home/Statistics/FootballMatchStatistic/')
+        directory = os.path.expanduser('~/Documents/Statistics/Football/')
         if not os.path.exists(directory):
             os.makedirs(directory)
 

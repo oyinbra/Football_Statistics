@@ -50,7 +50,7 @@ def export_match_statistics_to_xlsx(match_ids, file_title, xlsx_file, match_deta
 
         # Prepare statistics row
         stats_row = prepare_statistics_func(statistics, home_team, away_team)
-        match_info = f"{home_team} vs {away_team}"
+        match_info = f"{home_team} - {away_team}"
 
         # Append match data to the DataFrame
         new_row = {
@@ -79,7 +79,7 @@ def export_match_statistics_to_xlsx(match_ids, file_title, xlsx_file, match_deta
         
         df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
 
-        print(f"Statistics exported for {home_team} vs {away_team} (Match ID: {match_id}).")
+        print(f"Statistics exported for {home_team} - {away_team} (Match ID: {match_id}).")
 
     # Save DataFrame to XLSX
     df.to_excel(xlsx_file, index=False)

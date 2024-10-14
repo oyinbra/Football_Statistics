@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
         match_date, home_team, away_team, league = fetch_match_details(match_ids[0])
 
-        print(f"Select the title for the file:\n1. {home_team}\n2. {away_team}\n3. {home_team} vs {away_team} H2H\n4. Enter a custom title")
+        print(f"Select the title for the file:\n1. {home_team}\n2. {away_team}\n3. {home_team} - {away_team} H2H\n4. Enter a custom title")
         team_choice = input("Enter 1 for home team, 2 for away team, 3 for H2H, or 4 for custom title: ")
 
         if team_choice == "1":
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         elif team_choice == "2":
             file_title = away_team
         elif team_choice == "3":
-            file_title = f"{home_team} vs {away_team} H2H"
+            file_title = f"{home_team} - {away_team} H2H"
         elif team_choice == "4":
             file_title = input("Enter the custom title: ").strip()
         else:
